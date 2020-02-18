@@ -14,9 +14,16 @@ function analisadorNumeros(){
 //TODO: Terminado a implementação de mostrar, proxímo passo não mostrar o mesmo número!
 function mostrador(num) {
     var resu = ''
-    nums.push(num)
+    if(nums.indexOf(num)!= -1){
+        alert('Número já adicionado! Por favor,coloque outro número!')
+    }else{
+        nums.push(num)
+    }
+    
     for (const key in nums) {
-         resu += `Você digitou ${nums[key]} \n`
+        
+        resu += `Você digitou ${nums[key]} \n`
+        
     }
     console.log(resu)
     return res.innerHTML = resu
