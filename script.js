@@ -21,9 +21,7 @@ function mostrador(num) {
     }
     
     for (const key in nums) {
-        
         resu += `Você digitou ${nums[key]} \n`
-        
     }
     console.log(resu)
     return res.innerHTML = resu
@@ -34,7 +32,31 @@ function resultados(nums) {
     console.log("Cheguei aqui")
 }
 
-function maior(nums) {
+function maiorMenor(nums) {
     
     
+}
+
+function mostrarResultados(){
+    
+    let soma = 0
+    var maior = maiorMenor(nums)
+    soma = nums.length
+    console.log('Você incluiu '+ soma + ' números')
+}
+
+function maiorMenor(n){
+    var maiorRes = 0
+    var menorRes = 9999
+    for (const key in n) {
+        if (n[key] > maiorRes){
+            maiorRes = n[key] 
+        }
+        if(n[key] < menorRes){
+            menorRes = n[key]
+        }
+        
+    }
+    console.log('O Maior número é: '+ maiorRes) 
+    console.log('O menor número é: '+ menorRes) 
 }
